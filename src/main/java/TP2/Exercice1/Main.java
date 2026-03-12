@@ -41,15 +41,15 @@ public class Main {
             }
         }
 
+        String s1 = "ne sont pas";
         if (lesPoints.sontAlignes())
-            System.out.println("les trois point sont alignes");
-        else
-            System.out.println("les trois point ne sont pas alignes");
+            s1 = "sont";
+        System.out.println("les trois point "+ s1 +" alignes");
 
+        String s2 = "ne forment pas";
         if (lesPoints.estIsocele())
-            System.out.println("les trois point forment un triangle isocele");
-        else
-            System.out.println("les trois point ne forment pas un triangle isocele");
+            s2 = "forment";
+        System.out.println("les trois point "+ s2 +" un triangle isocele");
 
     }
 }
