@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         TroisPoint lesPoints;
-        List<Point> points = new ArrayList<Point>();;
+        List<Point> points = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         for (int i = 1; i <= 3; i++) {
             Point p;
@@ -41,8 +41,15 @@ public class Main {
             }
         }
 
+        if (lesPoints.sontAlignes())
+            System.out.println("les trois point sont alignes");
+        else
+            System.out.println("les trois point ne sont pas alignes");
 
-
+        if (lesPoints.estIsocele())
+            System.out.println("les trois point forment un triangle isocele");
+        else
+            System.out.println("les trois point ne forment pas un triangle isocele");
 
     }
 }
