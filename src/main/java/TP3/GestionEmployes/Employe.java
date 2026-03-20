@@ -5,6 +5,7 @@ public class Employe {
     protected String prenom;
     protected int age;
     protected int anciennete;
+    protected ReferenceBancaire compte;
 
     public Employe(String nom, String prenom, int age, int anciennete) {
         this.nom = nom;
@@ -13,8 +14,12 @@ public class Employe {
         this.anciennete = anciennete;
     }
 
+    public void setCompteBancaire(ReferenceBancaire compte) {
+        this.compte = compte;
+    }
+
     public double calculerBaseSalaire() {
-        return 0; // To be overridden
+        return 0;
     }
 
     public double calculerSalaire() {
@@ -23,5 +28,8 @@ public class Employe {
 
     public void afficher() {
         System.out.println("Nom: " + nom + " " + prenom + ", Age: " + age + ", Anciennete: " + anciennete + " ans");
+        if (compte != null) {
+            compte.afficher();
+        }
     }
 }
