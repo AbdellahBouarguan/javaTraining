@@ -17,4 +17,9 @@ public class Carre extends Figure implements Deformable {
     public Figure deformation(double coeffH, double coeffV) {
         return new Rectangle(getPosX(), getPosY(), cote * coeffH, cote * coeffV);
     }
+
+    @Override
+    public double surface() {
+        return cote * cote;
+    }
 }

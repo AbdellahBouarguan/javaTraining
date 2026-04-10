@@ -19,4 +19,9 @@ public class Triangle extends Figure implements Deformable {
     public Figure deformation(double coeffH, double coeffV) {
         return new Triangle(getPosX(), getPosY(), base * coeffH, hauteur * coeffV);
     }
+
+    @Override
+    public double surface() {
+        return (base * hauteur) / 2;
+    }
 }

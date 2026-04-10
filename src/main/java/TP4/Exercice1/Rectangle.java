@@ -19,4 +19,9 @@ public class Rectangle extends Figure implements Deformable {
     public Figure deformation(double coeffH, double coeffV) {
         return new Rectangle(getPosX(), getPosY(), largeur * coeffH, hauteur * coeffV);
     }
+
+    @Override
+    public double surface() {
+        return largeur * hauteur;
+    }
 }

@@ -18,4 +18,15 @@ public abstract class Figure {
     }
 
     public abstract void affiche();
+
+    public double estDistantDe(Figure fig) {
+        return Math.sqrt(Math.pow(this.posX - fig.getPosX(), 2) + Math.pow(this.posY - fig.getPosY(), 2));
+    }
+
+    public abstract double surface();
+
+    public void deplacement(int x, int y) {
+        this.posX += x;
+        this.posY += y;
+    }
 }
