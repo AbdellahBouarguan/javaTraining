@@ -1,0 +1,14 @@
+1) Number [] tab = new Integer[10];
+Valide. Les tableaux en Java sont covariants, un tableau d'Integer peut etre affecte a une variable tableau de Number.
+
+2) List<Number> l = new ArrayList<Integer>();
+Invalide. Les types generiques sont invariants en Java. List<Integer> n'est pas un sous-type de List<Number>.
+
+3) Collection<Number> c = new HashSet<Number>();
+Valide. HashSet implemente Collection et les types generiques correspondent exactement.
+
+4) Collection<? extends Number> d = new TreeSet<Integer>();
+Valide. Le joker (wildcard) <? extends Number> indique une collection contenant un sous-type de Number. Integer est un sous-type de Number, et TreeSet implemente Collection.
+
+5) Collection<? super Integer> e = new TreeSet<Number>();
+Valide. Le joker <? super Integer> indique une collection contenant un super-type de Integer. Number est un super-type de Integer, et TreeSet implemente Collection.
