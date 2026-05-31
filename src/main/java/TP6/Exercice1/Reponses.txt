@@ -1,0 +1,17 @@
+• () -> "Hello world"; 
+Supplier<String> : String get();
+
+• (String s) -> s; 
+UnaryOperator<String> : String apply(String S);
+
+• (String s1, String s2) -> s1.compareToIgnoreCase(s2); 
+Comparator<String> : int compare(String s1, String s2);
+
+• (String s) -> "Hello".equals(s); 
+Predicate<String> : boolean test(String s);
+
+• (String s) -> System.out.println("Hello world: "+s); 
+Consumer<String> : void accept(String s);
+
+• (String s) -> s.length(); 
+Function<String, Integer> : Integer apply(String s);
